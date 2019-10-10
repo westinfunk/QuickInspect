@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --simulator=\"iPhone 11 Pro\"",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.2"
+    "react-native": "0.61.2",
+    "react-native-elements": "^1.2.6",
+    "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^4.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -36,5 +39,9 @@
       "json",
       "node"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/westinfunk/QuickInspect.git",
+  "author": "westin <westinfunk@gmail.com>",
+  "license": "MIT"
 }
