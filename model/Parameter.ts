@@ -1,12 +1,18 @@
+export interface ParamObj {
+    id: string;
+    title: string;
+    value?: string;
+}
+
 export default class Parameter {
     public id: string;
     public title: string;
     public value?: string;
 
-    constructor(id: string, title: string) {
-        this.id = id;
-        this.title = title;
-        this.value = null;
+    constructor(param: ParamObj) {
+        this.id = param.id;
+        this.title = param.title;
+        this.value = param.value ? param.value : null;
     }
 
     public setValue(value: string): void {
@@ -21,7 +27,7 @@ export default class Parameter {
         }
     }
 
-    public rename(name: string): void {
-        this.title = name;
+    public rename(title: string): void {
+        this.title = title;
     }
 }
