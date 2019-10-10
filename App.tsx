@@ -6,7 +6,7 @@ import {
   View,
   StatusBar,
 } from 'react-native';
-
+import Account from './screens/AccountScreen';
 import { Text } from 'react-native-elements';
 
 
@@ -15,8 +15,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <LoginScreen /> */}
-        <Text>Blank</Text>
+        <Account />
       </SafeAreaView>
     </>
   );

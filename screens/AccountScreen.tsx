@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Card, Text, ListItem } from 'react-native-elements';
+import { Card, ListItem, Divider } from 'react-native-elements';
 import { string } from 'prop-types';
 import Account from '../model/Account';
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, View } from 'react-native';
 import { getAccount } from '../controller/AccountController';
 import logError from '../utils/ErrorHandler';
 
@@ -28,18 +28,33 @@ export default class AccountScreen extends React.Component<Props, State> {
             const id = "Account-" + Date.now();
             const account = await getAccount(id);
             this.setState({id, account});
-            
+
         } catch(err) {
-            console.log()
+            logError(err);
         }
     }
+    
+    renderAccountDetails() {
+        const account = this.state.account;
 
+        if (account) {
+            return (
+                <View>
+                    <ListItem title={account.name} subtitle="Name"/>
+                    <ListItem title={account.email} subtitle="Email"/>
+                    <ListItem title={account.company} subtitle="Company"/>
+                </View>
+            )
+        } else {
+            return null;
+        }
+    }
 
 
     render() {
         return (
             <Card title="Account">
-                <ListItem title=""/>
+                {this.renderAccountDetails()}
             </Card>
         )
     }

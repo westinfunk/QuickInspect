@@ -1,20 +1,23 @@
 export interface AccountObj {
     id: string;
-    userName?: string;
+    name?: string;
     email?: string;
-    companyName?: string;
+    company?: string;
+    phone?: string;
 }
 
 export default class Account {
     public id: string;
-    public userName: string;
+    public name: string;
     public email: string;
-    public companyName: string;
+    public company: string;
+    public phone: string;
 
     constructor(account: AccountObj) {
         this.id = account.id;
-        this.userName = account.userName ? account.userName : null;
+        this.name = account.name ? account.name : null;
         this.email = account.email ? account.email : null;
-        this.companyName = account.companyName ? account.companyName : null;
+        this.company = account.company ? account.company : null;
+        this.phone = account.phone ? account.phone : null;
     }
 }
