@@ -8,7 +8,7 @@ interface State {
  
 }
 
-export default class PreviousInspectionsScreen extends React.Component<Props, State> {
+export default class InspectionCategoriesScreen extends React.Component<Props, State> {
     state = {
 
     }
@@ -18,7 +18,7 @@ export default class PreviousInspectionsScreen extends React.Component<Props, St
     }
 
     render() {
-       return (<Card title="Previous Inspections">
+       return (<Card title="Inspection Categories">
            
         </Card>)
     }

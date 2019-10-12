@@ -9,13 +9,15 @@ import {
 import Account from './screens/AccountScreen';
 import { Text } from 'react-native-elements';
 
+import AuthNavigator from './navigation/AuthNavigator';
+
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <Account />
+        <AuthNavigator />
       </SafeAreaView>
     </>
   );
